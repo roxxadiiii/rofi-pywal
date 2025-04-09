@@ -1,0 +1,86 @@
+/* MACOS LAUNCHPAD LIKE THEME FOR ROFI - PYWAL COMPATIBLE */
+/* Author: Newman Sanchez (updated for pywal) */
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    font: "Montserrat 9";
+
+    background-color: transparent;
+    text-color: @foreground;
+    padding: 0px;
+    margin: 0px;
+}
+
+window {
+    fullscreen: true;
+    padding: 1em;
+    background-color: @background;
+}
+
+mainbox {
+    padding: 8px;
+}
+
+inputbar {
+    background-color: @normal-background;
+
+    margin: 0px calc(50% - 120px);
+    padding: 2px 4px;
+    spacing: 4px;
+
+    border: 1px;
+    border-radius: 2px;
+    border-color: @border-color;
+
+    children: [icon-search, entry];
+}
+
+prompt {
+    enabled: false;
+}
+
+icon-search {
+    expand: false;
+    filename: "system-search";  /* Use known icon or override with full path */
+    vertical-align: 0.5;
+    size: 1.5em;
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: @foreground;
+    text-color: @foreground;
+}
+
+listview {
+    margin: 48px calc(50% - 560px);
+    spacing: 48px;
+    columns: 6;
+    fixed-columns: true;
+}
+
+element, element-text, element-icon {
+    cursor: pointer;
+}
+
+element {
+    padding: 8px;
+    spacing: 4px;
+    orientation: vertical;
+    border-radius: 16px;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @selected-normal-background;
+}
+
+element-icon {
+    size: 4em;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    text-color: @foreground;
+}
